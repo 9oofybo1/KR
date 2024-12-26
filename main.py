@@ -125,7 +125,7 @@ def main():
             file_a = open('data.txt', 'a', encoding='utf-8')
             file_a.write(f'{name}, {dl}, {rate}')
 
-            print(f'Вы добавили в список телепередачу: {name}, {dl}, {rate}')
+            print(f'Вы добавили в список телепередачу: {name}, длительность: {dl}, рейтинг: {rate}')
             logging.info(f'Пользователь добавил в список телепередачу: {name}, {dl}, {rate}')
 
         if choose == 3:
@@ -141,7 +141,7 @@ def main():
             for x in file_r.readlines():
                 x = x.split(', ')
                 if name in x:
-                    print(f'Найдена телепередача: {x[0]}, {x[1]}, {x[2]}')
+                    print(f'Найдена телепередача: {x[0]}, длительность: {x[1]}, рейтинг: {x[2]}')
                     logging.info(f'Найдена телепередача: {x[0]}, {x[1]}, {x[2]}')
                     
                     flag = True
